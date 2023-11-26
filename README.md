@@ -1,2 +1,2 @@
 # JavaScript
-Repositório destinado aos condigos desenvolvidos na linguagem de JavaScript
+Repositório destinado aos códigos desenvolvidos na linguagem de JavaScript
