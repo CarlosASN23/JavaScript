@@ -1,0 +1,44 @@
+// Inicio da função calculadora de partidas Rankeadas
+function calculadora(mmr,nivel){
+
+    // Passagem da variavel que calculara o saldo de vitorias
+    mmr = vitoria - derrota;
+
+    // Passagem da variavel em forma de lista contendo os elos disponiveis
+    nivel = ['Ferro','Bronze','Prata','Ouro','Diamante','Lendário','Imortal'];
+
+    // Inicio do bloco de condicional que ranqueara o elo de acordo com o MMR
+    if (mmr <= 10){
+        elo = nivel[0];
+    }
+    else if (mmr >= 11 && mmr <= 20){
+        elo = nivel[1];
+    }
+    else if (mmr >= 21 && mmr <=50){
+        elo = nivel[2];
+    }
+    else if (mmr >= 51 && mmr <=80){
+        elo = nivel[3];
+    }
+    else if (mmr >= 81 && mmr <=90){
+        elo = nivel[4];
+    }
+    else if (mmr >= 91 && mmr <=100){
+        elo = nivel[5];
+    }
+    else {
+        elo = nivel[6];
+    } 
+        // Fim do bloco condicional
+
+        ranqueamento = console.log(`O Herói tem saldo de vitórias = ${mmr} e está no elo: ${elo}`);
+    
+        return ranqueamento;
+}
+
+    // Passagem (entrada) das variaveis nº de vitorias e nº de derrotas
+let vitoria = 123;
+let derrota = 30;
+
+    // Passagem para o retorno do resultado da função para as variaveis Vitoria e Derrota
+calculadora();
