@@ -2,13 +2,16 @@
 class Heroi{
 
     // Construção do construtor sem passagem de parâmetros
-    constructor(nome,idade,tipo){
+    constructor(nome,idade,tipo,nivel,energia,luta){
         this.nome = nome;
         this.idade = idade;
         this.tipo = tipo;
+        this.nivel = nivel;
+        this.energia = energia;
+        this.luta = luta;
     }
 
-    // Criação do método Atacar
+    // Criação do método Atacar - Mostrar quais metodo o Heroi usou para atacar
     Atacar(){
 
         if(this.tipo == "Guerreiro"){
@@ -24,10 +27,57 @@ class Heroi{
             console.log("O " + this.tipo + " atacou usando Shurikens");
         }
     }
+
+    // Criação do método Defender - Mostrar quais metodo o Heroi usou para se defender
+    Defender(){
+
+        if(this.tipo == "Guerreiro"){
+            console.log("O " + this.tipo + " se defendeu usando escudo");
+        }
+        else if (this.tipo == "Mago"){
+            console.log("O " + this.tipo + " se defendeu através de um escudo de energia");
+        }
+        else if (this.tipo == "Monge"){
+            console.log("O " + this.tipo + " se defendeu se esquivando");
+        }
+        else if (this.tipo == "Ninja"){
+            console.log("O " + this.tipo + " se defendeu através do jutsu de substituição");
+        }
+    }
+
+    // Criação do método se Aventurar - Se o Heroi tiver enegia suficiente ele pode sair em uma nova aventura
+    Aventura(){
+
+        if(this.energia == "Cheia"){
+            console.log("Pronto para mais uma aventura!");
+        }
+        else if (this.energia == "Metade"){
+            console.log("Dependenddo da Aventura, Vamos se embora!");
+        }
+        else if (this.energia == "Baixa"){
+            console.log("Melhor deixar para amanhã!");
+        }
+    }
+
+    // Criação do método para verificar se o Heroi foi o vencedor ou perdedor de um combate
+    Combate(){
+        if(this.luta == "Vencedor"){
+            console.log("O Herói " + this.nome + " venceu a luta contra o monsto." + "\nE como recompensa ganhou"
+            + " 3 pontos de niveis" + "\nE seu nivel agora é:" + (this.nivel + 3));
+        }
+        else if(this.luta == "Derrotado"){
+            console.log("O Herói " + this.nome + " perdeu a luta contra o monsto." + "\nE como punição perdeu"
+            + " 3 pontos de niveis" + "\nE seu nivel agora é:" + (this.nivel - 3));
+        }
+    }
 }
 
-// Chamamento do objeto Heroi
-let h01 = new Heroi("Salomão",52,"Mago");
+// Criação de um novo objeto da classe Heroi
+let h01 = new Heroi("Salomão",52,"Mago",104,"Cheia","Vencedor");
 
+// Chamamento dos métodos para o objeto h01
 console.log(h01);
 h01.Atacar();
+h01.Aventura();
+h01.Combate();
+h01.Defender();
