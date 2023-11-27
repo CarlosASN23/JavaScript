@@ -1,0 +1,33 @@
+// Criação da Classe Heroi
+class Heroi{
+
+    // Construção do construtor sem passagem de parâmetros
+    constructor(nome,idade,tipo){
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    // Criação do método Atacar
+    Atacar(){
+
+        if(this.tipo == "Guerreiro"){
+            console.log("O " + this.tipo + " atacou usando espadas");
+        }
+        else if (this.tipo == "Mago"){
+            console.log("O " + this.tipo + " atacou usando magia");
+        }
+        else if (this.tipo == "Monge"){
+            console.log("O " + this.tipo + " atacou usando artes marciais");
+        }
+        else if (this.tipo == "Ninja"){
+            console.log("O " + this.tipo + " atacou usando Shurikens");
+        }
+    }
+}
+
+// Chamamento do objeto Heroi
+let h01 = new Heroi("Salomão",52,"Mago");
+
+console.log(h01);
+h01.Atacar();
